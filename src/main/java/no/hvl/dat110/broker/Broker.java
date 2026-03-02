@@ -1,6 +1,5 @@
 package no.hvl.dat110.broker;
 
-//test kommentar
 
 import no.hvl.dat110.common.Logger;
 import no.hvl.dat110.common.Stopable;
