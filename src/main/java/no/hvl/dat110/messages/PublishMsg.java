@@ -4,26 +4,18 @@ public class PublishMsg extends Message {
 
 	// message sent from client to create publish a message on a topic 
 	
-	private String user = "";
 	private String topic = "";
 	private String message = "";
 
 	public PublishMsg(String user, String topic, String message) {
-		this.user = user;
+		super(MessageType.PUBLISH, user);
 		this.topic = topic;
 		this.message = message;
 	}
 
-	public String getUser() {
-		return user;
-	}
 
 	public String getTopic() {
 		return topic;
-	}
-
-	public void setUser(String user) {
-		this.user = user;
 	}
 
 	public void setTopic(String topic) {
@@ -46,7 +38,7 @@ public class PublishMsg extends Message {
 	
 	//string metoden
 	public String toString() {
-		return "Vi har motatt en forespørsel fra " + user + ", anngående " + topic + " med verdien "
+		return "Vi har motatt en forespørsel fra " + super.getUser() + ", anngående " + topic + " med verdien "
 				+ message;
 	}
 }
