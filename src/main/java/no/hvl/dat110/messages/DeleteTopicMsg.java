@@ -24,6 +24,6 @@ public class DeleteTopicMsg extends Message {
 	// Complete the constructor, get/set-methods, and toString method
 	// as described in the project text
     public String toString() {
-  		return "Brukeren " + super.getUser() + " vil slette temnaet " + topic + ".";
+  		return "Brukeren " + super.getUser() + " vil slette temaet " + topic + ".";
   	}	
 }
