@@ -22,6 +22,12 @@ public class TemperatureDevice {
 		
 		for(int i = 0; i<COUNT; i++) {
 			client.publish(Common.TEMPTOPIC, sn.read()+"");
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		// - disconnect from the broker¨
 		client.disconnect();
