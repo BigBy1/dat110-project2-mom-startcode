@@ -26,8 +26,13 @@ public class TemperatureDevice {
 		client.connect(); // connect
 
 		for(int i = 0; i < COUNT; i++) { // replicating real sensor
-			PublishMsg msg = (PublishMsg) client.receive();
-			System.out.println("Temperature: " + msg.getMessage());
+			client.publish(Common.TEMPTOPIC, sn.read()+"");
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		client.disconnect();
 

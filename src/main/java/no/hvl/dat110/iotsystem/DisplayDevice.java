@@ -41,7 +41,6 @@ public class DisplayDevice {
 		
 		System.out.println("Display stopping ... ");
 		
-		throw new UnsupportedOperationException(TODO.method());
 		
 	}
 }
